@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="MovieTicketReservation.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+      <asp:HyperLink ID="homeHyperLink" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <asp:HyperLink ID="moviesHyperLink" runat="server" NavigateUrl="~/Movies.aspx">Movies</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:HyperLink ID="theatreHyperLink" runat="server" NavigateUrl="~/Theatre.aspx">Theatres</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:HyperLink ID="assignMoviesHyperLink" runat="server" NavigateUrl="~/AssignMovie.aspx">Assign Movies</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+    <asp:HyperLink ID="adminHomeHyperLink" runat="server" NavigateUrl="~/AdminHome.aspx">AdminHome</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:HyperLink ID="logoutHyperLink" runat="server" NavigateUrl="~/Home.aspx">Logout</asp:HyperLink>
+    <form id="form1" runat="server">
+        
+     
+       
+&nbsp;&nbsp;
+       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+&nbsp;<div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+         
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    </body>
+    </html>

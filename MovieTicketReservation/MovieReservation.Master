@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MovieReservation.master.cs" Inherits="MovieTicketReservation.MovieReservation" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:brown">
+    <div id="header" style="padding: inherit">
+    </div>
+    <form id="form1" method="post" runat="server">
+    <div>
+         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx" BackColor="#CC6600" BorderColor="#666699">Home</asp:HyperLink>&nbsp;&nbsp;
+         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Contact.aspx" BackColor="#CCCCCC" BorderColor="Red">Contact Us</asp:HyperLink>
+        </div>
+       
+        <div id="contentholder" >
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder> 
+             </div>    
+      <div id="contentholder2"></div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">           
+        </asp:ContentPlaceHolder>
+        <div id="contentholder3">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+<div id="footer">
+            footer content goes here.
+         </div>
+            </asp:ContentPlaceHolder>
+   </div>
+       
+       
+    </form>
+</body>
+</html>

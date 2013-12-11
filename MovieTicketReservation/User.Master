@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="MovieTicketReservation.User" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+     <asp:HyperLink ID="homeHyperLink" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>&nbsp;&nbsp;&nbsp;
+    <asp:HyperLink ID="bookTicketHyperLink" runat="server" NavigateUrl="~/CancelTicket.aspx" >Cancel Ticket</asp:HyperLink>&nbsp;&nbsp;
+      <asp:HyperLink ID="userHomeHyperLink" runat="server" NavigateUrl="~/UserHome.aspx">User Home</asp:HyperLink>&nbsp;&nbsp;
+        <asp:HyperLink ID="signoutHyperLink" runat="server" NavigateUrl="~/Home.aspx">Signout</asp:HyperLink>&nbsp;&nbsp;
+    <form id="form1" runat="server">
+    &nbsp;&nbsp;&nbsp;&nbsp;
+      
+&nbsp;<div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        
+        </asp:ContentPlaceHolder>
+        
+    </div>
+    </form>
+</body>
+</html>
