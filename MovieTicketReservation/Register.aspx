@@ -13,7 +13,7 @@
 
        <br />
         <asp:Label ID="userIdLabel" runat="server" Text="User Id" style="margin-left:10px"></asp:Label>
-        <asp:TextBox ID="userIdTextBox" runat="server" style="margin-left: 120px" Width="95px" CssClass="validation"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="userIdTextBox" runat="server" style="margin-left: 118px" Width="100px" CssClass="validation"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:RequiredFieldValidator ID="userIdRequiredFieldValidator" runat="server" ErrorMessage="User Id is required" ControlToValidate="userIdTextBox"></asp:RequiredFieldValidator>
         <br />
         <br />
@@ -44,18 +44,18 @@
         <br />
         <br />
         <asp:Label ID="phoneNumberLabel" runat="server" Text="Phone No" style="margin-left:10px"></asp:Label>
-        <asp:TextBox ID="phoneNumberTextBox" runat="server" style="margin-left: 92px" Width="100px" TextMode="Phone"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="phoneNumberTextBox" runat="server" style="margin-left: 95px" Width="100px" TextMode="Phone"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:RequiredFieldValidator ID="phoneNumberRequiredFieldValidator" runat="server" ErrorMessage="Phone No is required" ControlToValidate="phoneNumberTextBox"></asp:RequiredFieldValidator>
         <br />
         <br />
         <asp:Label ID="emailIdLabel" runat="server" Text="Email Id" style="margin-left:10px"></asp:Label>
-        <asp:TextBox ID="emailIdTextBox" runat="server" style="margin-left: 102px" Width="100px" TextMode="Email"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="emailIdTextBox" runat="server" style="margin-left: 103px" Width="100px" TextMode="Email"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:RequiredFieldValidator ID="emailIdRequiredFieldValidator" runat="server" ErrorMessage="Email Id is required" ControlToValidate="emailIdTextBox"></asp:RequiredFieldValidator>
         <br />
         <br />
    
     <asp:Label ID="addressLabel" runat="server" Text="Address" style="margin-left:10px"></asp:Label>
-    <asp:TextBox ID="addressTextBox" runat="server" style="margin-left: 99px" Width="100px" TextMode="MultiLine"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:TextBox ID="addressTextBox" runat="server" style="margin-left: 100px" Width="100px" TextMode="MultiLine"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
    
         <asp:RequiredFieldValidator ID="addressRequiredFieldValidator" runat="server" ErrorMessage="Address is required" ControlToValidate="addressTextBox"></asp:RequiredFieldValidator>
    
@@ -72,12 +72,18 @@
     <br />
    <br />
     <asp:Button ID="submitButton" runat="server" Text="Sign Up" style="margin-left: 17px" Width="75px" OnClick="submitButton_Click" />
-    <asp:Button ID="clearButton" runat="server" style="margin-left: 59px" Text="Reset" Width="75px" />
+    <asp:Button ID="resetButton" runat="server" style="margin-left: 59px" Text="Reset" Width="75px" OnClick="clearButton_Click" />
     <br />
     <br />
          <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
         
   
     </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>
+<asp:Content ID="Content4" runat="server" contentplaceholderid="ContentPlaceHolder3">
+    <div id="footer">
+         </div>
+            </asp:Content>
+

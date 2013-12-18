@@ -31,6 +31,15 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.DropDownList theatreDropDownList;
         
         /// <summary>
+        /// theatreRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator theatreRequiredFieldValidator;
+        
+        /// <summary>
         /// movieLabel control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace MovieTicketReservation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList movieDropDownList;
+        
+        /// <summary>
+        /// movieRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator movieRequiredFieldValidator;
         
         /// <summary>
         /// dateLabel control.
@@ -67,6 +85,15 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.DropDownList dateDropDownList;
         
         /// <summary>
+        /// dateRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator dateRequiredFieldValidator;
+        
+        /// <summary>
         /// showLabel control.
         /// </summary>
         /// <remarks>
@@ -83,6 +110,15 @@ namespace MovieTicketReservation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList showDropDownList;
+        
+        /// <summary>
+        /// showRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator showRequiredFieldValidator;
         
         /// <summary>
         /// numberOfTicketsLabel control.

@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*Movies.aspx.cs
+   This form takes movie details as input data and if data is valid the details are inserted to database
+   by administrator.
+ 
+   Revision History
+              Srinivasa Phanindra Valluri, Puneet Kalva, 2013.11.20: Created     
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,9 +25,10 @@ namespace MovieTicketReservation
             releaseDateTextBox.Text = releaseDateCalendar.SelectedDate.ToShortDateString();
         }
 
+        //Add Button which inserts movie details to database.
         protected void addButton_Click(object sender, EventArgs e)
         {
-            
+
             myCon = ConfigurationManager.AppSettings["MovieTicketReservation"];
             string movieId = movieIdTextBox.Text;
             string movieName =movieTextBox.Text;
@@ -32,21 +41,33 @@ namespace MovieTicketReservation
             sqlcon.Open();
             String query = "INSERT INTO Movie VALUES('" + movieId + "','" + movieName + "', '" + movieDirector + "','" + actors + "','" + genre + "', '" + releaseDate + "')";
             SqlCommand cmd = new SqlCommand(query, sqlcon);
-            int temp = cmd.ExecuteNonQuery();
-            if (temp > 0)
+            try
             {
-                Response.Write("Movie details added successfully");
+                int temp = cmd.ExecuteNonQuery();
+                if (temp > 0)
+                {
+                    Response.Write("Movie details added successfully");
 
+                }
             }
-            else
+            catch
+            {
                 Response.Write("Insertion Failed");
-            sqlcon.Close();
+            }
+                sqlcon.Close();
         }
 
-        //protected void releaseDateCalendar_SelectionChanged(object sender, EventArgs e)
-        //{
-        //    releaseDateTextBox.Text = releaseDateCalendar.SelectedDate.ToShortDateString();
-        //}
+        //Clear button which clears the input data.
+        protected void clearButton_Click(object sender, EventArgs e)
+        {
+            movieIdTextBox.Text = "";
+            movieTextBox.Text = "";
+            directorTextBox.Text = "";
+            actorsTextBox.Text = "";
+            genreTextBox.Text = "";
+        }
+
+        
 
 
 

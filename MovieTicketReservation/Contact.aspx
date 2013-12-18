@@ -10,5 +10,9 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <asp:Calendar ID="Calendar1" runat="server" Height="229px" Width="380px"></asp:Calendar>
-</asp:Content>
+    </asp:Content>
+<asp:Content ID="Content4" runat="server" contentplaceholderid="ContentPlaceHolder3">
+<div id="footer">
+         </div>
+            </asp:Content>
+

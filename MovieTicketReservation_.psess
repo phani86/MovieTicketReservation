@@ -50,7 +50,7 @@
       <LaunchMethod>Browser</LaunchMethod>
       <LaunchUrl>http://localhost:51712/</LaunchUrl>
       <SiteUrl>http://localhost:51712/</SiteUrl>
-      <LocalPath>G:\Visual Studio 2012\Projects\MovieTicketReservation\MovieTicketReservation\</LocalPath>
+      <LocalPath>E:\TermProject\MovieTicketReservation\MovieTicketReservation\</LocalPath>
       <VRoot>
       </VRoot>
       <NetAppHost>IIS</NetAppHost>
@@ -68,6 +68,11 @@
       <ProjName>MovieTicketReservation</ProjName>
     </ProjBinary>
   </Binaries>
+  <Reports>
+    <Report>
+      <Path>MovieTicketReservation_131212.vsp</Path>
+    </Report>
+  </Reports>
   <Launches>
     <ProjBinary>
       <Path>:PB:{35A37E39-9785-48C0-8784-510700526B5D}|MovieTicketReservation\MovieTicketReservation.csproj</Path>

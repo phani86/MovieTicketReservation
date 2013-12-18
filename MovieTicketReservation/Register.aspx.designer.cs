@@ -265,13 +265,13 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.Button submitButton;
         
         /// <summary>
-        /// clearButton control.
+        /// resetButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button clearButton;
+        protected global::System.Web.UI.WebControls.Button resetButton;
         
         /// <summary>
         /// ValidationSummary1 control.

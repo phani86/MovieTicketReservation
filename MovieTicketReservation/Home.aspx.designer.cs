@@ -85,13 +85,13 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.LinkButton signUpLinkButton;
         
         /// <summary>
-        /// ValidationSummary1 control.
+        /// userValidationSummary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.ValidationSummary userValidationSummary;
         
         /// <summary>
         /// placeLabel control.
@@ -130,33 +130,6 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.Label dateLabel;
         
         /// <summary>
-        /// dateDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dateDropDownList;
-        
-        /// <summary>
-        /// dateRequiredFieldValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator dateRequiredFieldValidator;
-        
-        /// <summary>
-        /// movieLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label movieLabel;
-        
-        /// <summary>
         /// movieDropDownList control.
         /// </summary>
         /// <remarks>
@@ -173,6 +146,33 @@ namespace MovieTicketReservation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator movieRequiredFieldValidator;
+        
+        /// <summary>
+        /// movieLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label movieLabel;
+        
+        /// <summary>
+        /// dateDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dateDropDownList;
+        
+        /// <summary>
+        /// dateRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator dateRequiredFieldValidator;
         
         /// <summary>
         /// timingsLabel control.
@@ -209,5 +209,23 @@ namespace MovieTicketReservation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button checkAvilabilityButton;
+        
+        /// <summary>
+        /// availabilityLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label availabilityLabel;
+        
+        /// <summary>
+        /// availabilityTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox availabilityTextBox;
     }
 }

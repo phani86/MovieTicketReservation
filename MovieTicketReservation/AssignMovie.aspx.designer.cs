@@ -31,6 +31,15 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.DropDownList theatreDropDownList;
         
         /// <summary>
+        /// theatreRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator theatreRequiredFieldValidator;
+        
+        /// <summary>
         /// movieLabel control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace MovieTicketReservation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList movieDropDownList;
+        
+        /// <summary>
+        /// movieRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator movieRequiredFieldValidator;
         
         /// <summary>
         /// dateAvailableLabel control.
@@ -67,6 +85,15 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.TextBox dateAvailableTextBox;
         
         /// <summary>
+        /// dateRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator dateRequiredFieldValidator;
+        
+        /// <summary>
         /// dateCalendar control.
         /// </summary>
         /// <remarks>
@@ -85,6 +112,15 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.TextBox timeTextBox;
         
         /// <summary>
+        /// timeRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator timeRequiredFieldValidator;
+        
+        /// <summary>
         /// assignButton control.
         /// </summary>
         /// <remarks>
@@ -94,12 +130,12 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.Button assignButton;
         
         /// <summary>
-        /// viewButton control.
+        /// assignValidationSummary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewButton;
+        protected global::System.Web.UI.WebControls.ValidationSummary assignValidationSummary;
     }
 }

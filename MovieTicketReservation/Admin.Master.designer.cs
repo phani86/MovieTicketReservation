@@ -40,6 +40,15 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.HyperLink moviesHyperLink;
         
         /// <summary>
+        /// viewMoviesHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink viewMoviesHyperLink;
+        
+        /// <summary>
         /// theatreHyperLink control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace MovieTicketReservation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink assignMoviesHyperLink;
+        
+        /// <summary>
+        /// viewAssignMoviesHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink viewAssignMoviesHyperLink;
         
         /// <summary>
         /// adminHomeHyperLink control.

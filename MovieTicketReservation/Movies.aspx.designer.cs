@@ -31,6 +31,15 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.TextBox movieIdTextBox;
         
         /// <summary>
+        /// movieRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator movieRequiredFieldValidator;
+        
+        /// <summary>
         /// movieLabel control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace MovieTicketReservation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox movieTextBox;
+        
+        /// <summary>
+        /// movieNameRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator movieNameRequiredFieldValidator;
         
         /// <summary>
         /// directorLabel control.
@@ -67,6 +85,15 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.TextBox directorTextBox;
         
         /// <summary>
+        /// movieDirectorRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator movieDirectorRequiredFieldValidator;
+        
+        /// <summary>
         /// actorsLabel control.
         /// </summary>
         /// <remarks>
@@ -83,6 +110,15 @@ namespace MovieTicketReservation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox actorsTextBox;
+        
+        /// <summary>
+        /// movieActorsRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator movieActorsRequiredFieldValidator;
         
         /// <summary>
         /// genreLabel control.
@@ -103,6 +139,15 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.TextBox genreTextBox;
         
         /// <summary>
+        /// movieGenreRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator movieGenreRequiredFieldValidator;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -119,6 +164,15 @@ namespace MovieTicketReservation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox releaseDateTextBox;
+        
+        /// <summary>
+        /// releaseDateRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator releaseDateRequiredFieldValidator;
         
         /// <summary>
         /// releaseDateCalendar control.
@@ -139,15 +193,6 @@ namespace MovieTicketReservation {
         protected global::System.Web.UI.WebControls.Button addButton;
         
         /// <summary>
-        /// viewLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton viewLinkButton;
-        
-        /// <summary>
         /// clearButton control.
         /// </summary>
         /// <remarks>
@@ -155,5 +200,14 @@ namespace MovieTicketReservation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button clearButton;
+        
+        /// <summary>
+        /// movieValidationSummary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary movieValidationSummary;
     }
 }

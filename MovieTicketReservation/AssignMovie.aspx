@@ -3,8 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p style="margin-left: 40px">
-        <br />
+    <p style="margin-left: 40px; background-color: #808080;">
+                <br />
     &nbsp;&nbsp;
     &nbsp;&nbsp;
     <br />
@@ -15,30 +15,37 @@
         <asp:ListItem>Select Theatre</asp:ListItem>
     </asp:DropDownList>
     
+    &nbsp;&nbsp;    <asp:RequiredFieldValidator ID="theatreRequiredFieldValidator" runat="server" ControlToValidate="theatreDropDownList" ErrorMessage="Theatre should be selected" SetFocusOnError="True" InitialValue="Select Theatre">*</asp:RequiredFieldValidator>
+    
     <br />
    <br /> 
-   <asp:Label ID="movieLabel" runat="server" Text="Movie Name"></asp:Label>
-    <asp:DropDownList ID="movieDropDownList" runat="server" style="margin-left: 56px"  >
+   &nbsp;&nbsp;<asp:Label ID="movieLabel" runat="server" Text="Movie Name"></asp:Label>
+    <asp:DropDownList ID="movieDropDownList" runat="server" style="margin-left: 42px" AppendDataBoundItems="True" AutoPostBack="True"  >
         <asp:ListItem>Select Movie</asp:ListItem>
-    </asp:DropDownList>
+    </asp:DropDownList>&nbsp;
+  &nbsp;&nbsp;     <asp:RequiredFieldValidator ID="movieRequiredFieldValidator" runat="server" ErrorMessage="Movie should be selected" ControlToValidate="movieDropDownList" InitialValue="Select Movie" SetFocusOnError="True">*</asp:RequiredFieldValidator>
     <br />
     <br />
     &nbsp;
     <asp:Label ID="dateAvailableLabel" runat="server" Text="Date Available"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<asp:TextBox ID="dateAvailableTextBox" runat="server" TextMode="Date"></asp:TextBox>
+<asp:TextBox ID="dateAvailableTextBox" runat="server" TextMode="Date" Width="100px" ></asp:TextBox>&nbsp;&nbsp;&nbsp;
+                <asp:RequiredFieldValidator ID="dateRequiredFieldValidator" runat="server" ErrorMessage="Date should be assigned" ControlToValidate="dateAvailableTextBox">*</asp:RequiredFieldValidator>
 <br />
     <br />
-    </p>
-<asp:Calendar ID="dateCalendar" runat="server" style="margin-left: 77px; margin-bottom: 0px;"></asp:Calendar>
+   
+<asp:Calendar ID="dateCalendar" runat="server" style="margin-left: 70px; margin-bottom: 0px;"></asp:Calendar>
 &nbsp;&nbsp;
     <br />
-&nbsp; Time
-    <asp:TextBox ID="timeTextBox" runat="server" style="margin-left: 62px" TextMode="Time"></asp:TextBox>
+&nbsp; &nbsp;&nbsp;Time
+    <asp:TextBox ID="timeTextBox" runat="server" style="margin-left: 73px" TextMode="Time" Width="100px" ></asp:TextBox>&nbsp;&nbsp;&nbsp;
+                <asp:RequiredFieldValidator ID="timeRequiredFieldValidator" runat="server" ErrorMessage="Time should be assigned" ControlToValidate="timeTextBox">*</asp:RequiredFieldValidator>
     <br />
 <br />
-<asp:Button ID="assignButton" runat="server" style="margin-left: 41px" Text="Assign" OnClick="assignButton_Click" />
-<asp:Button ID="viewButton" runat="server" style="margin-left: 74px" Text="View" />
+        <br />
+<asp:Button ID="assignButton" runat="server" style="margin-left: 13px" Text="Assign" OnClick="assignButton_Click" Width="70px" />
     <br />
-<br />
+        <br />         
+      <asp:ValidationSummary ID="assignValidationSummary" runat="server" />
+      </p>
 </asp:Content>

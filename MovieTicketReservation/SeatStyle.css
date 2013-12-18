@@ -1,0 +1,31 @@
+﻿body {
+}
+ .Initial
+  {
+    display: block;
+    padding: 4px 18px 4px 18px;
+    float: left;
+    background: url("G:\Visual Studio 2012\Projects\MovieTicketReservation\MovieTicketReservation\apple.jpg") no-repeat right top;
+    color: red;
+    font-weight: bold;
+  }
+  .Initial:hover
+  {
+    color: White;
+    background: url("G:\Visual Studio 2012\Projects\MovieTicketReservation\MovieTicketReservation\banana.jpg") no-repeat right top;
+  }
+  .Clicked
+  {
+    float: left;
+    display: block;
+    background: url("G:\Visual Studio 2012\Projects\MovieTicketReservation\MovieTicketReservation\grapes.jpg") no-repeat right top;
+    padding: 4px 18px 4px 18px;
+    color: Black;
+    font-weight: bold;
+    color: green;
+  }
+
+iframe {
+    overflow: hidden;
+    border: 0 hidden;
+}
