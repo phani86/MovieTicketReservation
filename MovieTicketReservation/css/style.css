@@ -1,0 +1,16 @@
+body{
+	background: #3A6A8A;
+	color: #fff
+}
+table.checkAvailablity tr td{
+	width: 33%;
+	padding: 10px;
+}
+a{
+	color: #fff;
+}
+a:hover{
+	color: #333;
+	text-shadow: 2px 2px 5px #fff;
+	font-size: 16px;
+}

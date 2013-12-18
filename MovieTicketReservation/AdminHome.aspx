@@ -3,7 +3,5 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p style="background-color:brown">
     
-    </p>
 </asp:Content>

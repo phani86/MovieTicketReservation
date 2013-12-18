@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,39 +21,59 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body style="background-color:brown">
+<body>
     <div class="container">
         <div class="row">
             <div class="xs-col-12">
                 <div>
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx" BackColor="#CC6600" BorderColor="#666699">Home</asp:HyperLink>&nbsp;&nbsp;
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Contact.aspx" BackColor="#CCCCCC" BorderColor="Red">Contact Us</asp:HyperLink>
+                    <nav class="navbar navbar-inverse">
+                        <ul class="nav navbar-nav">
+                            <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink></li>
+                        </ul>
+                        
+                        
+                        
+                    </nav>
                 </div>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-xs-12">
                 <form id="form1" method="post" runat="server">
-                       
-                    <div id="contentholder" >
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                        </asp:ContentPlaceHolder> 
-                    </div>   
 
-                    <div id="contentholder2">
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">           
-                        </asp:ContentPlaceHolder>
+                    <div class="row">
+                       <div class="col-xs-12">
+                        <div id="contentholder" >
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder> 
+                         </div>   
+                        </div>    
                     </div>
 
-                    <div id="contentholder3">
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-                            <div id="footer">
-                                footer content goes here.
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="contentholder2">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">           
+                                </asp:ContentPlaceHolder>
                             </div>
-                        </asp:ContentPlaceHolder>
-                     </div>
-                       
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="contentholder3">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                                    <div id="footer">
+                                        footer content goes here.
+                                    </div>
+                            </asp:ContentPlaceHolder>
+                         </div>
+                           
+                        </div>
+                    </div>
+                    
                 </form>
         
             </div>

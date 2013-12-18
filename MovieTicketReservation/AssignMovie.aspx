@@ -3,42 +3,36 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p style="margin-left: 40px; background-color: #808080;">
-                <br />
-    &nbsp;&nbsp;
-    &nbsp;&nbsp;
-    <br />
-    <br />
-    &nbsp;
+    
     <asp:Label ID="theatreLabel" runat="server" Text="Theatre Name"></asp:Label>
     <asp:DropDownList ID="theatreDropDownList" runat="server" style="margin-left: 35px" AutoPostBack="True" OnSelectedIndexChanged="theatreDropDownList_SelectedIndexChanged1" AppendDataBoundItems="True" >
         <asp:ListItem>Select Theatre</asp:ListItem>
     </asp:DropDownList>
     
-    &nbsp;&nbsp;    <asp:RequiredFieldValidator ID="theatreRequiredFieldValidator" runat="server" ControlToValidate="theatreDropDownList" ErrorMessage="Theatre should be selected" SetFocusOnError="True" InitialValue="Select Theatre">*</asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="theatreRequiredFieldValidator" runat="server" ControlToValidate="theatreDropDownList" ErrorMessage="Theatre should be selected" SetFocusOnError="True" InitialValue="Select Theatre">*</asp:RequiredFieldValidator>
     
     <br />
    <br /> 
-   &nbsp;&nbsp;<asp:Label ID="movieLabel" runat="server" Text="Movie Name"></asp:Label>
+   <asp:Label ID="movieLabel" runat="server" Text="Movie Name"></asp:Label>
     <asp:DropDownList ID="movieDropDownList" runat="server" style="margin-left: 42px" AppendDataBoundItems="True" AutoPostBack="True"  >
         <asp:ListItem>Select Movie</asp:ListItem>
-    </asp:DropDownList>&nbsp;
-  &nbsp;&nbsp;     <asp:RequiredFieldValidator ID="movieRequiredFieldValidator" runat="server" ErrorMessage="Movie should be selected" ControlToValidate="movieDropDownList" InitialValue="Select Movie" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+    </asp:DropDownList>
+       <asp:RequiredFieldValidator ID="movieRequiredFieldValidator" runat="server" ErrorMessage="Movie should be selected" ControlToValidate="movieDropDownList" InitialValue="Select Movie" SetFocusOnError="True">*</asp:RequiredFieldValidator>
     <br />
     <br />
-    &nbsp;
+    
     <asp:Label ID="dateAvailableLabel" runat="server" Text="Date Available"></asp:Label>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<asp:TextBox ID="dateAvailableTextBox" runat="server" TextMode="Date" Width="100px" ></asp:TextBox>&nbsp;&nbsp;&nbsp;
+    
+<asp:TextBox ID="dateAvailableTextBox" runat="server" TextMode="Date" Width="100px" ></asp:TextBox>
                 <asp:RequiredFieldValidator ID="dateRequiredFieldValidator" runat="server" ErrorMessage="Date should be assigned" ControlToValidate="dateAvailableTextBox">*</asp:RequiredFieldValidator>
 <br />
     <br />
    
 <asp:Calendar ID="dateCalendar" runat="server" style="margin-left: 70px; margin-bottom: 0px;"></asp:Calendar>
-&nbsp;&nbsp;
+
     <br />
-&nbsp; &nbsp;&nbsp;Time
-    <asp:TextBox ID="timeTextBox" runat="server" style="margin-left: 73px" TextMode="Time" Width="100px" ></asp:TextBox>&nbsp;&nbsp;&nbsp;
+ Time
+    <asp:TextBox ID="timeTextBox" runat="server" style="margin-left: 73px" TextMode="Time" Width="100px" ></asp:TextBox>
                 <asp:RequiredFieldValidator ID="timeRequiredFieldValidator" runat="server" ErrorMessage="Time should be assigned" ControlToValidate="timeTextBox">*</asp:RequiredFieldValidator>
     <br />
 <br />
