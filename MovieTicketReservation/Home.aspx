@@ -46,7 +46,7 @@
           <tr>
             <td><asp:label ID="placeLabel" runat="server" Text="Select Theatre"></asp:label></td>
             <td>
-              <asp:DropDownList ID="theatreDropDownList" runat="server" ValidationGroup="availability" AppendDataBoundItems="True" AutoPostBack="True" OnSelectedIndexChanged="theatreDropDownList_SelectedIndexChanged" class="form-control">
+              <asp:DropDownList ID="theatreDropDownList" runat="server" ValidationGroup="availability" AutoPostBack="True" OnSelectedIndexChanged="theatreDropDownList_SelectedIndexChanged" class="form-control" AppendDataBoundItems="True">
               <asp:ListItem>Select Theatre</asp:ListItem>
               </asp:DropDownList>
             </td>
@@ -59,7 +59,7 @@
               <asp:Label ID="dateLabel" runat="server" Text="Select Movie"></asp:Label>
             </td>
             <td>
-              <asp:DropDownList ID="movieDropDownList" runat="server" ValidationGroup="availability" AppendDataBoundItems="True" AutoPostBack="True" OnSelectedIndexChanged="movieDropDownList_SelectedIndexChanged" class="form-control">
+              <asp:DropDownList ID="movieDropDownList" runat="server" ValidationGroup="availability" AutoPostBack="True" OnSelectedIndexChanged="movieDropDownList_SelectedIndexChanged" class="form-control" AppendDataBoundItems="True">
               <asp:ListItem>Select Movie</asp:ListItem>
              </asp:DropDownList>
             </td>
@@ -72,7 +72,7 @@
               <asp:Label ID="movieLabel" runat="server" Text="Select Date"></asp:Label>
             </td>
             <td>
-              <asp:DropDownList ID="dateDropDownList" runat="server" AppendDataBoundItems="True" AutoPostBack="True" OnSelectedIndexChanged="dateDropDownList_SelectedIndexChanged" class="form-control">
+              <asp:DropDownList ID="dateDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="dateDropDownList_SelectedIndexChanged" class="form-control" AppendDataBoundItems="True">
               <asp:ListItem>Select Date</asp:ListItem>
               </asp:DropDownList>
             </td>
@@ -85,7 +85,7 @@
               <asp:Label ID="timingsLabel" runat="server" Text="Select Show Timings" ></asp:Label>
             </td>            
             <td>
-              <asp:DropDownList ID="timingsDropDownList" runat="server" class="form-control">
+              <asp:DropDownList ID="timingsDropDownList" runat="server" class="form-control" AppendDataBoundItems="True" AutoPostBack="True">
              <asp:ListItem>Select Timings</asp:ListItem>
               </asp:DropDownList>
             </td>  

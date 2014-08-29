@@ -41,6 +41,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -75,7 +76,6 @@
     <Content Include="AdminHome.aspx" />
     <Content Include="ViewMovie.aspx" />
     <Content Include="ViewAssign.aspx" />
-    <Content Include="CancelTicket.aspx" />
     <Content Include="UserHome.aspx" />
     <Content Include="Seating.aspx" />
     <Content Include="SeatBooking.aspx" />
@@ -166,13 +166,6 @@
     </Compile>
     <Compile Include="ViewAssign.aspx.designer.cs">
       <DependentUpon>ViewAssign.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CancelTicket.aspx.cs">
-      <DependentUpon>CancelTicket.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CancelTicket.aspx.designer.cs">
-      <DependentUpon>CancelTicket.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserHome.aspx.cs">
       <DependentUpon>UserHome.aspx</DependentUpon>

@@ -17,3 +17,8 @@ G:\Visual Studio 2012\TermProject\MovieTicketReservation\MovieTicketReservation\
 G:\Visual Studio 2012\TermProject\MovieTicketReservation\MovieTicketReservation\obj\Debug\MovieTicketReservation.dll
 G:\Visual Studio 2012\TermProject\MovieTicketReservation\MovieTicketReservation\obj\Debug\MovieTicketReservation.pdb
 G:\Visual Studio 2012\TermProject\MovieTicketReservation\MovieTicketReservation\obj\Debug\MovieTicketReservation.csprojResolveAssemblyReference.cache
+C:\Users\Svalluri-cc\Desktop\PROG8180TermProject\MovieTicketReservation\MovieTicketReservation\bin\MovieTicketReservation.dll
+C:\Users\Svalluri-cc\Desktop\PROG8180TermProject\MovieTicketReservation\MovieTicketReservation\bin\MovieTicketReservation.pdb
+C:\Users\Svalluri-cc\Desktop\PROG8180TermProject\MovieTicketReservation\MovieTicketReservation\obj\Debug\MovieTicketReservation.csprojResolveAssemblyReference.cache
+C:\Users\Svalluri-cc\Desktop\PROG8180TermProject\MovieTicketReservation\MovieTicketReservation\obj\Debug\MovieTicketReservation.dll
+C:\Users\Svalluri-cc\Desktop\PROG8180TermProject\MovieTicketReservation\MovieTicketReservation\obj\Debug\MovieTicketReservation.pdb

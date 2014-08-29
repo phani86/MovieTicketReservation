@@ -36,13 +36,12 @@
     <br />
 &nbsp;&nbsp;
     <asp:Label ID="Label1" runat="server" Text="Release Date"></asp:Label>
-&nbsp;<asp:TextBox ID="releaseDateTextBox" runat="server" style="margin-left: 29px" Width="100px" ></asp:TextBox>
+&nbsp;<asp:TextBox ID="releaseDateTextBox" runat="server" style="margin-left: 29px" Width="100px" TextMode="Date" ></asp:TextBox>
 &nbsp;&nbsp;      <asp:RequiredFieldValidator ID="releaseDateRequiredFieldValidator" runat="server" ErrorMessage="Release Date is required" ControlToValidate="releaseDateTextBox">*</asp:RequiredFieldValidator>
     <br />
 &nbsp;&nbsp;&nbsp;
     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Calendar ID="releaseDateCalendar" runat="server" style="margin-left: 26px" ></asp:Calendar>
     <br />
         <br />
         <br />

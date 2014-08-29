@@ -18,6 +18,7 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
+using System.Web.Configuration;
 
 
 namespace MovieTicketReservation
@@ -32,9 +33,9 @@ namespace MovieTicketReservation
             try
             {
                 myCon = ConfigurationManager.AppSettings["MovieTicketReservation"];
-                if (!Page.IsPostBack)
+               if (!Page.IsPostBack)
                 {
-
+                   // theatreDropDownList.Items.Clear();
                     string query = "SELECT distinct theatreName FROM AssignMovie,Theatre where Theatre.theatreId=AssignMovie.tid";
                     SqlConnection sqlcon = new SqlConnection(myCon);
                     sqlcon.Open();
@@ -48,43 +49,43 @@ namespace MovieTicketReservation
                         }
                         dataReader.Close();
                     }
-                }
+               }
             }
             catch(Exception ex)
             {
                
                 Response.Write("Connection Unsuccessful") ;
             }
-               
+            //theatreDropDownList.Items.Clear(); 
         }
 
         //Population of avilable movies in selected theatre.
         protected void theatreDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            string tname = theatreDropDownList.SelectedItem.Text;
-            Response.Write(tname);
            
-            SqlConnection sqlcon = new SqlConnection(myCon);
-            string query = "SELECT distinct movieName FROM AssignMovie,Theatre,Movie where" +"\n"+
-            "(Theatre.theatreId in (select tid from AssignMovie,Theatre where theatreName='" + tname + "')) and AssignMovie.mId=Movie.movieId";
-            sqlcon.Open();
-            SqlCommand cmd = new SqlCommand(query, sqlcon);  
-            SqlDataReader dataReader = cmd.ExecuteReader();
-            if (dataReader.HasRows)
-            {
-                while (dataReader.Read())
-                {
-                    movieDropDownList.Items.Add(dataReader.GetValue(0).ToString());            
-                }
-            }
-            dataReader.Close();
+                string tname = theatreDropDownList.SelectedItem.Text;
+                movieDropDownList.Items.Clear();
+                    SqlConnection sqlcon = new SqlConnection(myCon);
+                    string query = "SELECT distinct movieName FROM AssignMovie,Theatre,Movie where" + "\n" +
+                    "(Theatre.theatreId in (select tid from AssignMovie,Theatre where theatreName='" + tname + "')) and AssignMovie.mId=Movie.movieId";
+                    sqlcon.Open();
+                    SqlCommand cmd = new SqlCommand(query, sqlcon);
+                    SqlDataReader dataReader = cmd.ExecuteReader();
+                    if (dataReader.HasRows)
+                    {
+                        while (dataReader.Read())
+                        {
+                            movieDropDownList.Items.Add(dataReader.GetValue(0).ToString());
+                        }
+                    }
+                    dataReader.Close();
+                    
         }
 
         //To check the availability of tickets for selected movie,theatre,date and timings of movie.
         protected void checkAvilabilityButton_Click(object sender, EventArgs e)
         {
-
+            availabilityTextBox.Text = "";
             string tName = theatreDropDownList.SelectedItem.Text;
             string mName = movieDropDownList.SelectedItem.Text;
             string mDate = dateDropDownList.SelectedItem.Text;
@@ -107,16 +108,14 @@ namespace MovieTicketReservation
                 {
                     Response.Write(@"<script language='javascript'>alert('Tickets not Available');</script>");
                 }
+                
             }
 
             catch (SqlException sqlex)
             {
                 Response.Write(sqlex.ToString());
             }
-            //catch
-            //{
-            //    Response.Write(@"<script language='javascript'>alert('Tickets not Available');</script>");
-            //}
+          
                 
             finally
             {
@@ -178,6 +177,7 @@ namespace MovieTicketReservation
         {
             string tname = theatreDropDownList.SelectedItem.Text;
             string movieName = movieDropDownList.SelectedItem.Text;
+            dateDropDownList.Items.Clear();
             string query = "SELECT distinct dateAvailable FROM AssignMovie,Theatre,Movie where" +"\n"+
             "(Theatre.theatreId in (select tid from AssignMovie,Theatre where theatreName='" + tname + "'))" +"\n"+
             "and AssignMovie.mId in(select movieId from Movie where movieName='" + movieName + "')";
@@ -191,23 +191,23 @@ namespace MovieTicketReservation
             DateTime todayDate = new DateTime();
             string dt = todayDate.ToShortDateString();
             dateDropDownList.DataBind();
+       
         }
 
         //Population of timings of movie for selected movie in theatre on the selected date
         protected void dateDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // System.IFormatProvider ifpformat = new System.Globalization.CultureInfo("en-US", true);
+            
             string tname = theatreDropDownList.SelectedItem.Text;
             string movieName = movieDropDownList.SelectedItem.Text;
-            //DateTime movieDate = DateTime.ParseExact(dateDropDownList.SelectedItem.Text,"YYYY-MM-DD",CultureInfo.GetCultureInfo("en-us"));
             string movieDate = dateDropDownList.SelectedItem.Text;
+            timingsDropDownList.Items.Clear();
             DateTime todayDate = DateTime.Now;
             string dt = todayDate.ToShortDateString();
-            //  Response.Write(dt);
+          
             if (dt.CompareTo(movieDate) < 0)
             {
                 Response.Write(movieDate);
-
                 string query = "SELECT distinct movieTime FROM AssignMovie,Theatre,Movie where" +"\n"+
                 "(Theatre.theatreId in (select tid from AssignMovie,Theatre where theatreName='" + tname + "'))" +"\n"+
                 "and AssignMovie.mId in(select movieId from Movie where movieName='" + movieName + "') and dateAvailable='" + movieDate + "'";

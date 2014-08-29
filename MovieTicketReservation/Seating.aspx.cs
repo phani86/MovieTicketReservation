@@ -22,7 +22,6 @@ namespace MovieTicketReservation
         {
             string tName = (string)(Session["Theatre"]);
             string mName = (string)(Session["Movie"]);
-          // DateTime mDate = (DateTime)(Session["Date"]);
             string mDate = (string)(Session["Date"]);
             string sTime = (string)(Session["Time"]);
             int quantity = (int)(Session["Quantity"]);

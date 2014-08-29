@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <asp:Label ID="theatreLabel" runat="server" Text="Theatre Name"></asp:Label>
-    <asp:DropDownList ID="theatreDropDownList" runat="server" style="margin-left: 35px" AutoPostBack="True" OnSelectedIndexChanged="theatreDropDownList_SelectedIndexChanged1" AppendDataBoundItems="True" >
+    <asp:DropDownList ID="theatreDropDownList" runat="server" style="margin-left: 35px" AutoPostBack="True"  AppendDataBoundItems="True" >
         <asp:ListItem>Select Theatre</asp:ListItem>
     </asp:DropDownList>
     
@@ -14,7 +14,7 @@
     <br />
    <br /> 
    <asp:Label ID="movieLabel" runat="server" Text="Movie Name"></asp:Label>
-    <asp:DropDownList ID="movieDropDownList" runat="server" style="margin-left: 42px" AppendDataBoundItems="True" AutoPostBack="True"  >
+    <asp:DropDownList ID="movieDropDownList" runat="server" style="margin-left: 46px" AppendDataBoundItems="True" AutoPostBack="True"  >
         <asp:ListItem>Select Movie</asp:ListItem>
     </asp:DropDownList>
        <asp:RequiredFieldValidator ID="movieRequiredFieldValidator" runat="server" ErrorMessage="Movie should be selected" ControlToValidate="movieDropDownList" InitialValue="Select Movie" SetFocusOnError="True">*</asp:RequiredFieldValidator>
@@ -28,8 +28,6 @@
 <br />
     <br />
    
-<asp:Calendar ID="dateCalendar" runat="server" style="margin-left: 70px; margin-bottom: 0px;"></asp:Calendar>
-
     <br />
  Time
     <asp:TextBox ID="timeTextBox" runat="server" style="margin-left: 73px" TextMode="Time" Width="100px" ></asp:TextBox>

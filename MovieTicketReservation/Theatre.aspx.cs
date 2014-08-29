@@ -29,11 +29,11 @@ namespace MovieTicketReservation
         protected void submitButton_Click(object sender, EventArgs e)
         {
             myCon = ConfigurationManager.AppSettings["MovieTicketReservation"];
-            string theatreId = theatreIdTextBox.Text;
-            string theatreName = theatreNameTextBox.Text;
+            string theatreId = theatreIdTextBox.Text.Trim();
+            string theatreName = theatreNameTextBox.Text.Trim();
             int theatreSize = Int32.Parse(theatreSizeTextBox.Text);
             float ticketCost = float.Parse(ticketCostTextBox.Text);
-            string manager = theatreManagerTextBox.Text;
+            string manager = theatreManagerTextBox.Text.Trim();
             // string movieId = movieIdTextBox.Text;
 
             SqlConnection sqlcon = new SqlConnection(myCon);

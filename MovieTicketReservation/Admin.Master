@@ -23,15 +23,19 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <asp:HyperLink ID="homeHyperLink" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>&nbsp;&nbsp;&nbsp;
-        <asp:HyperLink ID="moviesHyperLink" runat="server" NavigateUrl="~/Movies.aspx">Movies</asp:HyperLink>&nbsp;&nbsp;&nbsp;
-        <asp:HyperLink ID="viewMoviesHyperLink" runat="server" NavigateUrl="~/ViewMovie.aspx">View Movies</asp:HyperLink>&nbsp;&nbsp;&nbsp;
-      
-        <asp:HyperLink ID="theatreHyperLink" runat="server" NavigateUrl="~/Theatre.aspx">Theatres</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:HyperLink ID="assignMoviesHyperLink" runat="server" NavigateUrl="~/AssignMovie.aspx">Assign Movies</asp:HyperLink>&nbsp;&nbsp;&nbsp;
-        <asp:HyperLink ID="viewAssignMoviesHyperLink" runat="server" NavigateUrl="~/ViewAssign.aspx">View Assigned Movies</asp:HyperLink> &nbsp;&nbsp;&nbsp;&nbsp;   
-        <asp:HyperLink ID="adminHomeHyperLink" runat="server" NavigateUrl="~/AdminHome.aspx">AdminHome</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:HyperLink ID="logoutHyperLink" runat="server" NavigateUrl="~/Home.aspx">Logout</asp:HyperLink>      
+        <nav class="navbar navbar-inverse">
+          <ul class="nav navbar-nav">
+            <li>
+              <asp:HyperLink ID="homeHyperLink" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+            </li>
+            <li><asp:HyperLink ID="moviesHyperLink" runat="server" NavigateUrl="~/Movies.aspx">Movies</asp:HyperLink></li>
+            <li><asp:HyperLink ID="viewMoviesHyperLink" runat="server" NavigateUrl="~/ViewMovie.aspx">View Movies</asp:HyperLink></li>
+            <li><asp:HyperLink ID="theatreHyperLink" runat="server" NavigateUrl="~/Theatre.aspx">Theatres</asp:HyperLink></li>
+            <li><asp:HyperLink ID="assignMoviesHyperLink" runat="server" NavigateUrl="~/AssignMovie.aspx">Assign Movies</asp:HyperLink></li>
+            <li><asp:HyperLink ID="viewAssignMoviesHyperLink" runat="server" NavigateUrl="~/ViewAssign.aspx">View Assigned Movies</asp:HyperLink> </li>
+            <li><asp:HyperLink ID="adminHomeHyperLink" runat="server" NavigateUrl="~/AdminHome.aspx">AdminHome</asp:HyperLink></li>
+            <li><asp:HyperLink ID="logoutHyperLink" runat="server" NavigateUrl="~/Home.aspx">Logout</asp:HyperLink></li>
+        </ul>      
       </div>
     </div>
      <form id="form1" runat="server">

@@ -23,12 +23,12 @@
     <br />
     <br />
     <asp:Label ID="ticketCostLabel" runat="server" Text="Ticket Cost" style="margin-left:10px"></asp:Label>
-    <asp:TextBox ID="ticketCostTextBox" runat="server" style="margin-left: 46px" Width="100px" ></asp:TextBox>
+    <asp:TextBox ID="ticketCostTextBox" runat="server" style="margin-left: 52px" Width="100px" ></asp:TextBox>
      &nbsp;&nbsp;    <asp:RequiredFieldValidator ID="ticketCostRequiredFieldValidator" runat="server" ErrorMessage="Ticket cost is required" ControlToValidate="ticketCostTextBox">*</asp:RequiredFieldValidator>
     <br />
     <br />
     <asp:Label ID="theatreManagerLabel" runat="server" Text="Theatre Manager" style="margin-left:10px"></asp:Label>
-    <asp:TextBox ID="theatreManagerTextBox" runat="server" style="margin-left: 10px" Width="100px" Height="16px"></asp:TextBox>
+    <asp:TextBox ID="theatreManagerTextBox" runat="server" style="margin-left: 11px" Width="100px" ></asp:TextBox>
     &nbsp;&nbsp;     <asp:RequiredFieldValidator ID="theatreManagerRequiredFieldValidator" runat="server" ErrorMessage="Theatre Manager is required" ControlToValidate="theatreManagerTextBox">*</asp:RequiredFieldValidator>
     <br />
 &nbsp;

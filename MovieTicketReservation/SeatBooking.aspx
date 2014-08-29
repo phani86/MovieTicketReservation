@@ -12,16 +12,15 @@
        <br />
         <br />
 
-        <asp:Label ID="Label1" runat="server" Text="Select Seat No"></asp:Label>
+        <asp:Label ID="seatNumberLabel" runat="server" Text="Select Seat No"></asp:Label>
       
-        <asp:ListBox ID="seatListBox" runat="server" SelectionMode="Multiple" style="margin-left: 115px" Width="200px" Height="200px"  overflow="scroll"></asp:ListBox>
-     
+        <asp:ListBox ID="seatListBox" runat="server" SelectionMode="Multiple" style="margin-left: 115px" Width="200px" Height="200px"  overflow="scroll"></asp:ListBox><br />
+     <asp:Button ID="confirmButton" runat="server" style="margin-left: 87px" Text="Confirm" OnClick="confirmButton_Click" />
         <br />
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <br />
-    
-    
-        <asp:Button ID="confirmButton" runat="server" style="margin-left: 87px" Text="Confirm" OnClick="confirmButton_Click" />
+   
+        
     
     
          &nbsp;&nbsp;&nbsp;

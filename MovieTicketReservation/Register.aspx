@@ -14,12 +14,12 @@
        <br />
         <asp:Label ID="userIdLabel" runat="server" Text="User Id" style="margin-left:10px"></asp:Label>
         <asp:TextBox ID="userIdTextBox" runat="server" style="margin-left: 118px" Width="100px" CssClass="validation"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RequiredFieldValidator ID="userIdRequiredFieldValidator" runat="server" ErrorMessage="User Id is required" ControlToValidate="userIdTextBox"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="userIdRequiredFieldValidator" runat="server" ErrorMessage="User Id is required" ControlToValidate="userIdTextBox">*</asp:RequiredFieldValidator>
         <br />
         <br />
         <asp:Label ID="firstNameLabel" runat="server" Text="First Name" style="margin-left:10px"></asp:Label>
         <asp:TextBox ID="firstNameTextBox" runat="server" style="margin-left: 94px" Width="100px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RequiredFieldValidator ID="firstNameRequiredFieldValidator" runat="server" ErrorMessage="First Name is required" ControlToValidate="firstNameTextBox"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="firstNameRequiredFieldValidator" runat="server" ErrorMessage="First Name is required" ControlToValidate="firstNameTextBox">*</asp:RequiredFieldValidator>
        <br />
     
        
@@ -28,36 +28,36 @@
         <asp:Label ID="lastNameLabel" runat="server" Text="Last Name" style="margin-left:10px"></asp:Label>
         <asp:TextBox ID="lastNameTextBox" runat="server" style="margin-left: 94px" Width="100px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
        
-        <asp:RequiredFieldValidator ID="lastNameRequiredFieldValidator" runat="server" ErrorMessage="Last Name is required" ControlToValidate="lastNameTextBox"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="lastNameRequiredFieldValidator" runat="server" ErrorMessage="Last Name is required" ControlToValidate="lastNameTextBox">*</asp:RequiredFieldValidator>
        
     <br />
        
     <br />
     <asp:Label ID="passwordLabel" runat="server" Text="Password" style="margin-left:10px"></asp:Label>
     <asp:TextBox ID="passwordTextBox" runat="server" style="margin-left: 100px" TextMode="Password" Width="100px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RequiredFieldValidator ID="passwordRequiredFieldValidator" runat="server" ErrorMessage="Password is required" ControlToValidate="passwordTextBox"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="passwordRequiredFieldValidator" runat="server" ErrorMessage="Password is required" ControlToValidate="passwordTextBox">*</asp:RequiredFieldValidator>
     <br />
     <br />
         <asp:Label ID="confirmPasswordLabel" runat="server" Text="Confirm Password" style="margin-left:10px"></asp:Label>
         <asp:TextBox ID="confirmPasswordTextBox" runat="server" style="margin-left: 45px" Width="100px" TextMode="Password"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:CompareValidator ID="passwordCompareValidator" runat="server" ErrorMessage="Passwords do not match" ControlToCompare="passwordTextBox" ControlToValidate="confirmPasswordTextBox"></asp:CompareValidator>
+        <asp:CompareValidator ID="passwordCompareValidator" runat="server" ErrorMessage="Passwords do not match" ControlToCompare="passwordTextBox" ControlToValidate="confirmPasswordTextBox">*</asp:CompareValidator>
         <br />
         <br />
         <asp:Label ID="phoneNumberLabel" runat="server" Text="Phone No" style="margin-left:10px"></asp:Label>
         <asp:TextBox ID="phoneNumberTextBox" runat="server" style="margin-left: 95px" Width="100px" TextMode="Phone"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RequiredFieldValidator ID="phoneNumberRequiredFieldValidator" runat="server" ErrorMessage="Phone No is required" ControlToValidate="phoneNumberTextBox"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="phoneNumberRequiredFieldValidator" runat="server" ErrorMessage="Phone No is required" ControlToValidate="phoneNumberTextBox">*</asp:RequiredFieldValidator>
         <br />
         <br />
         <asp:Label ID="emailIdLabel" runat="server" Text="Email Id" style="margin-left:10px"></asp:Label>
         <asp:TextBox ID="emailIdTextBox" runat="server" style="margin-left: 103px" Width="100px" TextMode="Email"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RequiredFieldValidator ID="emailIdRequiredFieldValidator" runat="server" ErrorMessage="Email Id is required" ControlToValidate="emailIdTextBox"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="emailIdRequiredFieldValidator" runat="server" ErrorMessage="Email Id is required" ControlToValidate="emailIdTextBox">*</asp:RequiredFieldValidator>
         <br />
         <br />
    
     <asp:Label ID="addressLabel" runat="server" Text="Address" style="margin-left:10px"></asp:Label>
     <asp:TextBox ID="addressTextBox" runat="server" style="margin-left: 100px" Width="100px" TextMode="MultiLine"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
    
-        <asp:RequiredFieldValidator ID="addressRequiredFieldValidator" runat="server" ErrorMessage="Address is required" ControlToValidate="addressTextBox"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="addressRequiredFieldValidator" runat="server" ErrorMessage="Address is required" ControlToValidate="addressTextBox">*</asp:RequiredFieldValidator>
    
     <br />
     <br />

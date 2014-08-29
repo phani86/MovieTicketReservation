@@ -22,7 +22,7 @@ namespace MovieTicketReservation
         private string myCon;
         protected void Page_Load(object sender, EventArgs e)
         {
-            releaseDateTextBox.Text = releaseDateCalendar.SelectedDate.ToShortDateString();
+            //releaseDateTextBox.Text = releaseDateCalendar.SelectedDate.ToShortDateString();
         }
 
         //Add Button which inserts movie details to database.
@@ -30,11 +30,11 @@ namespace MovieTicketReservation
         {
 
             myCon = ConfigurationManager.AppSettings["MovieTicketReservation"];
-            string movieId = movieIdTextBox.Text;
-            string movieName =movieTextBox.Text;
-            string movieDirector = directorTextBox.Text;
-            string actors = actorsTextBox.Text;
-            string genre = genreTextBox.Text;
+            string movieId = movieIdTextBox.Text.Trim();
+            string movieName =movieTextBox.Text.Trim();
+            string movieDirector = directorTextBox.Text.Trim();
+            string actors = actorsTextBox.Text.Trim() ;
+            string genre = genreTextBox.Text.Trim();
            
             string releaseDate = releaseDateTextBox.Text;
             SqlConnection sqlcon = new SqlConnection(myCon);

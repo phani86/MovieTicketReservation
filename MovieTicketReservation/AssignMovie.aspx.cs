@@ -51,12 +51,7 @@ namespace MovieTicketReservation
                     
                 sqlcon.Close();
             }
-          
-        
-        protected void movieDropDownList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-        }
+         
         
         //Assign button which assigns a movie to the theatre,date and time.
         protected void assignButton_Click(object sender, EventArgs e)
@@ -64,7 +59,6 @@ namespace MovieTicketReservation
             CultureInfo ci = CultureInfo.InvariantCulture;
             string movieName = movieDropDownList.SelectedItem.ToString();
             string theatreName = theatreDropDownList.SelectedItem.ToString();
-            dateAvailableTextBox.Text = dateCalendar.SelectedDate.ToShortDateString();
             string dateAvailable = dateAvailableTextBox.Text;
             string time = timeTextBox.Text.ToString();
             String query = "INSERT INTO AssignMovie(tid,mid,dateAvailable,movieTime) VALUES" +"\n"+
@@ -91,10 +85,7 @@ namespace MovieTicketReservation
 
        
 
-        protected void theatreDropDownList_SelectedIndexChanged1(object sender, EventArgs e)
-        {
-          
-        }
+       
 
       
       

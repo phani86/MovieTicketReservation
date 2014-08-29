@@ -22,6 +22,8 @@ namespace MovieTicketReservation
     public partial class WebForm11 : System.Web.UI.Page
     {
         private string myCon;
+
+        //Population of Theatres from AssignMovie Table
         protected void Page_Load(object sender, EventArgs e)
         {
             myCon = ConfigurationManager.AppSettings["MovieTicketReservation"];
@@ -51,7 +53,7 @@ namespace MovieTicketReservation
         //Population of movie from selected theatre.
         protected void theatreDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-                       
+            movieDropDownList.Items.Clear();    
             string tname = theatreDropDownList.SelectedItem.Text;
             SqlConnection sqlcon = new SqlConnection(myCon);
             string query = "SELECT distinct movieName FROM AssignMovie,Theatre,Movie where" +"\n"+
@@ -72,37 +74,37 @@ namespace MovieTicketReservation
         //Population of date baased on the selected theatre and movie.
         protected void movieDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dateDropDownList.Items.Clear();
             string tname = theatreDropDownList.SelectedItem.Text;
             string movieName=movieDropDownList.SelectedItem.Text;
             string query = "SELECT distinct dateAvailable FROM AssignMovie,Theatre,Movie where" +"\n"+
             "(Theatre.theatreId in (select tid from AssignMovie,Theatre where theatreName='" + tname + "'))"+"\n"+ 
             "and AssignMovie.mId in(select movieId from Movie where movieName='"+movieName+"')";
 
-            //sqlcon.Open();
             SqlDataAdapter da = new SqlDataAdapter(query, myCon);
             DataSet d1 = new DataSet();
             da.Fill(d1, "AssignMovie");
             dateDropDownList.DataSource = d1.Tables["AssignMovie"];
-           // movieDropDownList.DataTextField = "mName";
+         
             dateDropDownList.DataTextField = "dateAvailable";
            dateDropDownList.DataTextFormatString = "{0:MM/dd/yyyy}";
            DateTime todayDate = new DateTime();
            string dt = todayDate.ToShortDateString();
-         //  Response.Write(dt);
-            //showDropDownList.DataTextField = "movieTime";
+        
             dateDropDownList.DataBind();
         }
 
         protected void dateDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // System.IFormatProvider ifpformat = new System.Globalization.CultureInfo("en-US", true);
+
+            showDropDownList.Items.Clear();
             string tname = theatreDropDownList.SelectedItem.Text;
             string movieName = movieDropDownList.SelectedItem.Text;
-            //DateTime movieDate = DateTime.ParseExact(dateDropDownList.SelectedItem.Text,"YYYY-MM-DD",CultureInfo.GetCultureInfo("en-us"));
+          
             string movieDate = dateDropDownList.SelectedItem.Text;
             DateTime todayDate=DateTime.Now;
             string dt = todayDate.ToShortDateString();
-         //  Response.Write(dt);
+        
            if (dt.CompareTo(movieDate) < 0)
            {
                Response.Write(movieDate);
@@ -128,11 +130,9 @@ namespace MovieTicketReservation
 
         protected void bookButton_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid)
-            {
+          
                 string tName = theatreDropDownList.SelectedItem.Text;
-                string mName = movieDropDownList.SelectedItem.Text;
-                //DateTime mDate = DateTime.Parse(dateDropDownList.SelectedItem.Text).Date;
+                string mName = movieDropDownList.SelectedItem.Text;                
                 string mDate = dateDropDownList.SelectedItem.Text;
                 string sTime = showDropDownList.SelectedItem.Text;
                 int quantity = int.Parse(quantityDropDownList.SelectedItem.Value);
@@ -144,11 +144,12 @@ namespace MovieTicketReservation
                 Session.Add("Quantity", quantity);
                 Session.Add("Cost", cost);
                 Server.Transfer("Seating.aspx");
-            }
+           
         }
 
         protected void quantityDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            costDropDownList.Items.Clear();
             string tname = theatreDropDownList.SelectedItem.Text;
             string query = "SELECT ticketCost FROM Theatre where theatreName='"+tname +"'";           
             SqlDataAdapter da = new SqlDataAdapter(query, myCon);
@@ -156,8 +157,6 @@ namespace MovieTicketReservation
             da.Fill(dataSet, "Theatre");
             costDropDownList.DataSource = dataSet.Tables["Theatre"];
             costDropDownList.DataTextField= "ticketCost";
-           // costDropDownList.DataTextFormatString = "{0:c}";
-
             costDropDownList.DataBind();
         }
     }
